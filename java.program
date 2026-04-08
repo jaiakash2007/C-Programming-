@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class ReminderSystem {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int dueDate, currentDate;
+
+        System.out.print("Enter Due Date (day): ");
+        dueDate = sc.nextInt();
+
+        System.out.print("Enter Current Date (day): ");
+        currentDate = sc.nextInt();
+
+        if (currentDate < dueDate) {
+            System.out.println("Reminder: Payment due soon!");
+        } 
+        else if (currentDate == dueDate) {
+            System.out.println("Reminder: Payment due today!");
+        } 
+        else {
+            System.out.println("Alert: Payment overdue!");
+        }
+
+        sc.close();
+    }
+}
